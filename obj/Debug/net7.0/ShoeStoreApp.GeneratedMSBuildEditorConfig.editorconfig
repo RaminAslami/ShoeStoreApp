@@ -15,3 +15,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp
 build_property._RazorSourceGeneratorDebug = 
+
+[/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Shoe/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvZS9MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

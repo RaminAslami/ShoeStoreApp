@@ -1,0 +1,29 @@
+@using System.Globalization
+@model ShoeStoreApp.ViewModels.ShoeListViewModel
+
+@{
+    Layout = null;
+    CultureInfo usCulture = new CultureInfo("en-US");
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+     <h1>@Model.CurrentCategory</h1> 
+    @foreach (var shoe in Model.Shoes)
+    {
+        <div>
+            <h2>@shoe.Name</h2>
+            
+            <h2>@shoe.Price.ToString("C", usCulture)</h2>
+            <h2>@shoe.Category.CategoryName</h2>
+        </div>
+    }
+</div>
+</body>
+</html>
