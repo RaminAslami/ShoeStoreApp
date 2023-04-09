@@ -29,6 +29,9 @@ if (app.Environment.IsDevelopment())
 //enables routing, endpoint routing.
 app.MapDefaultControllerRoute();
 
+//if data is empty in the database then add fake data
+DbInitializer.Seed(app);
+
 app.Run();
 
 
