@@ -27,7 +27,13 @@ if (app.Environment.IsDevelopment())
 }
 
 //enables routing, endpoint routing.
+//This is the default route "{controller=Home}/{action=Index}/{id?}"
+//We can add manual routing see below
 app.MapDefaultControllerRoute();
+
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 //if data is empty in the database then add fake data
 DbInitializer.Seed(app);

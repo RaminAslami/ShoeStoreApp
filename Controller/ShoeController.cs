@@ -25,8 +25,21 @@ namespace ShoeStoreApp.Controller
             // return View(_shoeRepository.AllShoes);
 
             ShoeListViewModel shoeListViewModel = new ShoeListViewModel(_shoeRepository.AllShoes,
-                "Basketball shoes");
+                "All shoes");
             return View(shoeListViewModel);
         }
+        public IActionResult Details(int id)
+        {
+            var shoe = _shoeRepository.GetShoeById(id);
+            if (shoe == null)
+            {
+                return NotFound();
+            }
+
+            return View(shoe);
+
+        }
+        
+        
     }
 }

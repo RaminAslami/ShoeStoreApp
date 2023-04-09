@@ -4,21 +4,23 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    @foreach (var pie in Model.Shoes)
+    @foreach (var shoe in Model.Shoes)
     {
         <div class="col">
             <div class="card pie-card">
-                <img src="@pie.ImageThumbnailUrl" class="card-img-top" alt="@pie.Name">
+                <img src="@shoe.ImageThumbnailUrl" class="card-img-top" alt="@shoe.Name">
                 <div class="card-body pie-button">
                     <h4 class="d-grid">
                     </h4>
 
                     <div class="d-flex justify-content-between mt-2">
                         <h2 class="text-start">
-                            <a class="pie-link">@pie.Name</a>
+                            <a class="pie-link" asp-controller="Shoe" asp-action="Details"
+                               asp-route-id="@shoe.ShoeId"
+                               >@shoe.Name</a>
                         </h2>
                         <h5 class="text-nowrap">
-                            @pie.Price.ToString("c")
+                            @shoe.Price.ToString("c")
                         </h5>
                     </div>
                 </div>
