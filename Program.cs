@@ -6,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
+builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 //enables MVC in the collection
 builder.Services.AddControllersWithViews();
 
@@ -20,6 +23,7 @@ var app = builder.Build();
 
 //looks for the WWWROOT 
 app.UseStaticFiles();
+app.UseSession();
 //diagnostics, developer. Use this when we are developing
 if (app.Environment.IsDevelopment()) 
 {

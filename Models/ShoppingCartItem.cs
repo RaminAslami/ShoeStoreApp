@@ -6,5 +6,6 @@ public class ShoppingCartItem
     public Shoe Shoe { get; set; } = default!;
     public int Amount { get; set; }
     public string? ShoppingCartId { get; set; }
+    //GUID
 
 }

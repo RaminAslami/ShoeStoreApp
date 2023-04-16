@@ -9,7 +9,6 @@
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
-      <Folder Include="Controller" />
       <Folder Include="wwwroot\Images" />
     </ItemGroup>
 
