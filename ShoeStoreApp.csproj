@@ -29,4 +29,8 @@
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Views\Shared\Components\CategoryMeny\Default.cshtml.cs" />
+    </ItemGroup>
+
 </Project>

@@ -16,8 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Shared/Components/CategoryMeny/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvQ2F0ZWdvcnlNZW55L0RlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Shared/Components/ShoppingCartSummary/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvU2hvcHBpbmdDYXJ0U3VtbWFyeS9EZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ramin.aslami/RiderProjects/ShoeStoreApp/ShoeStoreApp/Views/Shared/_Carousel.cshtml]

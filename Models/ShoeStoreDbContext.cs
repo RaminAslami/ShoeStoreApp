@@ -11,6 +11,7 @@ public class ShoeStoreDbContext: DbContext
     }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Shoe> Shoe { get; set; }
-
     public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderDetails> OrderDetails { get; set; }
 }

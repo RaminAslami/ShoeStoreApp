@@ -19,15 +19,38 @@ namespace ShoeStoreApp.Controller
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List()
+        public IActionResult List(string category)
         {
-            // ViewBag.CurrentCategory = "Basketball shoes";
-            // return View(_shoeRepository.AllShoes);
+            IEnumerable<Shoe> shoes;
+            string? currentCategory;
 
-            ShoeListViewModel shoeListViewModel = new ShoeListViewModel(_shoeRepository.AllShoes,
-                "All shoes");
-            return View(shoeListViewModel);
+            if (string.IsNullOrEmpty(category))
+            {
+                shoes = _shoeRepository.AllShoes.OrderBy(s => s.ShoeId);
+                currentCategory = "All Shoes";
+            }
+            else
+            {
+                shoes = _shoeRepository.AllShoes.Where(s => s.Category.CategoryName == category)
+                    .OrderBy(s => s.ShoeId);
+
+                currentCategory = _categoryRepository.AllCategories
+                    .FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
+                
+            }
+
+            return View(new ShoeListViewModel(shoes, currentCategory));
+
         }
+        // public IActionResult List()
+        // {
+        //     // ViewBag.CurrentCategory = "Basketball shoes";
+        //     // return View(_shoeRepository.AllShoes);
+        //
+        //     ShoeListViewModel shoeListViewModel = new ShoeListViewModel(_shoeRepository.AllShoes,
+        //         "All shoes");
+        //     return View(shoeListViewModel);
+        // }
         public IActionResult Details(int id)
         {
             var shoe = _shoeRepository.GetShoeById(id);
